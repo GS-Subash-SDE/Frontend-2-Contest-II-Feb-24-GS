@@ -224,7 +224,7 @@ searchBox.addEventListener("input", (e) => {
   let keys = Object.keys(studentList);
   keys = keys.filter((a) => {
     let compareStr = `${studentList[a]["studentName"]} ${studentList[a]["email"]}`;
-    return compareStr.toLowerCase().includes(searchVal);
+    return compareStr.toLowerCase().includes(searchVal.toLowerCase());
   });
 
   newDetails(keys);
